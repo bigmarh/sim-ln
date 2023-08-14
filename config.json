@@ -1,10 +1,11 @@
 {
     "nodes": [ 
     {
-        "ip": "",
-        "macaroon": "",
-        "cert": "",
-        "id": ""
+        "ip": "localhost:10001",
+        "macaroon": "/Users/marh/.polar/networks/2/volumes/lnd/alice/data/chain/bitcoin/regtest/admin.macaroon",
+        "cert": "/Users/marh/.polar/networks/2/volumes/lnd/alice/tls.cert",
+        "id": "alice",
+        "alias":"alice"
     }],
     "activity": [ 
     {
