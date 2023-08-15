@@ -4,14 +4,15 @@
         "ip": "localhost:10001",
         "macaroon": "/Users/marh/.polar/networks/2/volumes/lnd/alice/data/chain/bitcoin/regtest/admin.macaroon",
         "cert": "/Users/marh/.polar/networks/2/volumes/lnd/alice/tls.cert",
-        "id": "alice",
-        "alias":"alice"
+        "id": "03e87433ac48583825fb89d8f0aa270f58cd0ac5b7d369deaa7fcdc58ff157eef4",
+        "alias":"alice",
+
     },{
         "ip": "localhost:10004",
         "macaroon": "/Users/marh/.polar/networks/2/volumes/lnd/dave/data/chain/bitcoin/regtest/admin.macaroon",
         "cert": "/Users/marh/.polar/networks/2/volumes/lnd/dave/tls.cert",
-        "id": "dave",
-        "alias":"dave"
+        "id": "028ee6577461090f2e4906f0172c69f40fc7e792a99e3559e64acdb41bfda940da",
+        "alias":"dave",
     }],
     "activity": [ 
     {
