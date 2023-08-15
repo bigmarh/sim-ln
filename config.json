@@ -6,6 +6,12 @@
         "cert": "/Users/marh/.polar/networks/2/volumes/lnd/alice/tls.cert",
         "id": "alice",
         "alias":"alice"
+    },{
+        "ip": "localhost:10004",
+        "macaroon": "/Users/marh/.polar/networks/2/volumes/lnd/dave/data/chain/bitcoin/regtest/admin.macaroon",
+        "cert": "/Users/marh/.polar/networks/2/volumes/lnd/dave/tls.cert",
+        "id": "dave",
+        "alias":"dave"
     }],
     "activity": [ 
     {
