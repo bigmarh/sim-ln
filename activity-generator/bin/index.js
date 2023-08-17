@@ -213,7 +213,6 @@ async function promptForActivities() {
         promptForActivities();
     } else {
 
-
         exec("ls -la", (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
