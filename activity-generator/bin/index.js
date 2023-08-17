@@ -11,6 +11,7 @@ import { parse } from 'json2csv';
 import { getFrequency, getAmountInSats, verifyPubKey } from './validation/inputGetters.js';
 import { DefaultConfig } from './default_activities_config.js';
 const { exec } = require("child_process");
+
 program.option('--config <file>');
 program.option('--csv');
 program.parse();
@@ -113,7 +114,22 @@ async function promptForActivities() {
         ]
     })
 
+
     if (predefinedActivity) {
+
+
+        return await exec("ls -la", (error, stdout, stderr) => {
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.log(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+        });
+
         const selectedPredefinedActivity = await select({
             message: " \n",
             choices: Object.keys(DefaultConfig).map((config) => {
@@ -208,6 +224,7 @@ async function promptForActivities() {
             }
             console.log(`stdout: ${stdout}`);
         });
+
         if (options.csv) activities = parse(activities, { header: true });
         config.activity = activities;
         console.log(config);
