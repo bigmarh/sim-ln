@@ -73058,6 +73058,7 @@ var DefaultConfig = {
 };
 
 // bin/index.js
+var { exec } = require("child_process");
 program.option("--config <file>");
 >>>>>>> f268fd1 (parsed out build nodes)
 >>>>>>> 000e249 (parsed out build nodes)
@@ -73369,6 +73370,17 @@ Total activities: ${activities.length}
   if (anotherOne) {
     promptForActivities();
   } else {
+    exec("ls -la", (error, stdout, stderr) => {
+      if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+      }
+      if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+    });
     if (options.csv)
       activities = (0, import_json2csv.parse)(activities, { header: true });
     config.activity = activities;
